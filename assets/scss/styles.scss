@@ -1,0 +1,421 @@
+@charset "UTF-8";
+
+@import "foundation/scss/normalize.scss";
+@import "foundation.scss";
+
+$primary-color: #0169B2;
+$border-width: 1px;
+	
+body {
+	background-image: url(/public/img/noise.jpg);
+}
+
+article {
+	
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+h1 {
+	font-weight: 600;
+	text-shadow: 0px 1px 0.5px #000;
+	line-height: 0.8;
+	margin-top: 0;
+	margin-bottom: 0.6rem;
+}
+
+h2, h3 {
+	font-weight: 800;
+	line-height: 1;
+	margin-bottom: 0.2rem;
+}
+
+.container {
+	@include grid-row();
+	
+	background-color: #fff;
+	border: $border-width solid $primary-color;
+	//box-shadow: 0px 0px 10px #000;	
+}
+
+.header {
+	@include grid-row();
+		
+	padding-top: rem-calc(24);
+	border-bottom: $border-width solid $primary-color;
+	//background-image: linear-gradient(to top, #e8e8e8 0%, #d3d3d3 100%);
+}
+
+.photo {
+	@include grid-column(
+    	$columns: 3,
+    	$float: $default-float
+  	);
+	
+	text-align: center;
+	
+	img {
+		border: $border-width solid $primary-color;
+		margin-left: rem-calc(15px);
+	}
+}
+
+.profile {
+	@include grid-column(
+    	$columns: 9,
+    	$float: $default-float
+  	);
+}
+
+.profile-name {
+	@include grid-row();
+
+	.subheader {
+		line-height: 1;
+		margin-top: 0.3rem;
+		margin-left: 0.1rem;
+		color: #fff;
+		font-weight: 600;
+		background-color: #0169B2;
+		text-transform: uppercase;
+		padding: 5px;
+	}
+}
+
+.profile-info {
+	@include grid-row();
+
+	padding-top: 1rem;
+
+	.about {
+		@include grid-column(
+			$columns: 8,
+			$float: $default-float,
+			$collapse: true
+		);
+	}
+
+	.contacts {
+		@include grid-column(
+			$columns: 4,
+			$float: $default-float
+		);
+
+		ul {
+			list-style-type: none;
+			margin-left: 0;
+		}
+	}
+}
+
+.email:before,
+.phone:before,
+.linkedin:before,
+.github:before,
+.company:before,
+.country:before,
+.period:before {
+	font-family: "Foundation Icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	text-decoration: inherit;
+	font-size: rem-calc(20px);
+	width: rem-calc(24px);
+	text-align: center;
+	vertical-align: text-bottom;
+}
+
+.about h3:before,
+.contacts h3:before,
+.experience h3:before,
+.certification h3:before,
+.education h3:before,
+.skills h3:before,
+.languages h3:before,
+.publications h3:before,
+.projects h3:before,
+.customers h3:before {
+	font-family: "Foundation Icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1.75rem;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	text-decoration: inherit;
+	font-size: 1.75rem;
+	width: 2rem;
+	text-align: center;
+	vertical-align: top;
+	margin-top: -4px;
+	margin-left: -7px;
+}
+
+.email:before {
+	content: "\f16d"; 
+}
+
+.phone:before {
+	content: "\f1f8";
+}
+
+.linkedin:before {
+	content: "\f1d0";
+}
+
+.github:before {
+	content: "\f1c9";
+}
+
+.about h3:before {
+	content: "\f1ee";
+}
+
+.contacts h3:before {
+	content: "\f164";
+}
+
+.experience h3:before {
+	content: "\f1fc";
+}
+
+.certification h3:before {
+	content: "\f206";
+}
+
+.education h3:before {
+	content: "\f11f";
+}
+
+.skills h3:before {
+	content: "\f179";
+}
+
+.languages h3:before {
+	content: "\f132";
+}
+
+.publications h3:before {
+	content: "\f18e";
+}
+
+.projects h3:before {
+	content: "\f165";
+}
+
+.customers h3:before {
+	content: "\f200";
+}
+
+.company:before {
+	content: "\f15a";
+}
+
+.country:before {
+	content: "\f172";
+}
+
+.period:before {
+	content: "\f124";
+}
+
+.main {
+	@include grid-row();
+		
+	border-bottom: $border-width solid $primary-color;
+	padding-top: 1.25rem;
+}
+
+.main-left {
+	@include grid-column(
+		$columns: 8,
+		$float: $default-float
+	);
+}
+
+.main-right {
+	@include grid-column(
+		$columns: 4,
+		$float: $default-float
+	);
+}
+	
+.job, .level, .certificate {
+	@include clearfix;
+	
+	margin-bottom: 1.5rem;
+	
+	.title {
+		@include grid-row();
+		
+		font-size: 1rem;
+		color: #fff;
+		background-color: #0169B2;
+		padding: 0 5px;
+	}
+	
+	.place {
+		margin-bottom: 0.25rem;
+	}
+	
+	.description {
+		@include grid-row();		
+		line-height: 1.5;
+		
+		ul {
+			list-style-type: square;
+			margin-bottom: 0;
+			margin-left: 1.2rem;
+		}
+	}
+}
+
+.skills {
+	ul {
+		list-style-type: none;
+		margin-left: 0;
+		
+		li {
+			@include clearfix;
+		}
+	}
+	
+	.name {
+		float: left;
+		font-weight: 400;
+	}
+	
+	.years {
+		float: right;
+		color: #0169B2;
+		width: 90px;
+		padding: 0 5px;
+		margin-bottom: 1px;
+		height: 23px;
+	}
+	
+	.years-number {
+		background-color: #0169B2;
+		color: #fff;
+		display: inline-block;
+		width: 1.5rem;
+		height: 100%;
+		text-align: center;
+	}
+}
+
+.languages {
+	ul {
+		list-style-type: none;
+		margin-left: 0;
+		
+		li {
+			@include clearfix;
+		}
+	}
+	
+	.name {
+		float: left;
+		font-weight: 400;
+	}
+	
+	.level {
+		float: right;
+		background-color: #0169B2;
+		color: #fff;
+		width: 80px;
+		padding: 0 5px;
+		margin-bottom: 1px;
+		height: 23px;
+		text-align: center;
+	}
+}
+
+.publications, .projects {
+	ul {
+		list-style-type: none;
+		margin-left: 0;
+		
+		li {
+			@include clearfix;
+		}
+	}
+	
+	.name {
+		float: left;
+		font-weight: 400;
+	}
+}
+
+.footer {
+	@include grid-row();
+}
+
+.customers {
+	@include grid-column(
+		$columns: 12,
+		$float: $default-float
+	);
+	
+	background-color: #fff;
+	padding-top: 1.25rem;
+
+	ul {
+		@include clearfix;
+		
+		list-style-type: none;
+		margin-left: 0;
+		
+		li {
+			float: left;
+		}
+	}
+	
+	.customer {
+		display: block;
+		height: 120px;
+		width: 240px;
+		position: relative;
+		
+		img {
+			margin: auto;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			padding: 2px 4px;
+		}
+		
+		&:hover img {
+			outline: $border-width solid $primary-color;
+		}
+	}
+}
+
+.copyright {
+	@include grid-row();
+}
+
+.signature {
+	@include grid-column(
+		$columns: 12,
+		$float: $default-float
+	);
+	
+	text-align: center;
+	font-weight: 600;
+	background-color: #0169B2;
+	color: #fff;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Home",
+  "description": "Home",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "4.x"
+  },
+  "devDependencies": {
+    "gulp": "^3.6.2",
+    "gulp-sass": "^0.7.1",
+    "gulp-minify-css": "^0.3.4"
+  }
+}
