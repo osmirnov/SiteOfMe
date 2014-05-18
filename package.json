@@ -1,7 +1,6 @@
 {
-  "name": "SiteOfMe",
-  "description": "SiteOfMe",
-  "author": "osmirnov",
+  "name": "Home",
+  "description": "Home",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
@@ -11,12 +10,5 @@
     "gulp": "^3.6.2",
     "gulp-sass": "^0.7.1",
     "gulp-minify-css": "^0.3.4"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/osmirnov/SiteOfMe.git"
-  },
-  "engines": {
-    "node": "0.10.x"
   }
 }
