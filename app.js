@@ -20,16 +20,11 @@ app.route('/')
 		res.render('home', data);
 	});
 
-app.route('/old')
-	.get(function(req, res, next) {
-		res.sendfile('views/home.html');
-	});
-
 app.use(function(err, req, res, next) {
 	console.error(err.stack);
 	res.send(500, 'Something broke!');
 });
 
-var server = app.listen(3000, function() {
+var server = app.listen(process.env.PORT || 80, function() {
 	console.log('Listening on port %d', server.address().port);
 });

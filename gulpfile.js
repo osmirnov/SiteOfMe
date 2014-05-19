@@ -8,6 +8,7 @@ gulp.task('styles', function () {
 			errLogToConsole: true,
 			includePaths : ['./bower_components']
 		}))
+		.pipe(minifyCss({ keepBreaks:true }))
     	.pipe(gulp.dest('./public/css'));
 });
 
